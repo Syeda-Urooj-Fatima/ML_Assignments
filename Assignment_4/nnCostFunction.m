@@ -94,7 +94,10 @@ Delta2=delta3'*a2;
 %               and Theta2_grad from Part 2.
 %
 
-
+D1=Delta1./m;
+D2=Delta2./m;
+D1(:,2:end)=D1(:,2:end)+(lambda/m)*(Theta1(:,2:end));
+D2(:,2:end)=D2(:,2:end)+(lambda/m)*(Theta2(:,2:end));
 
 
 
